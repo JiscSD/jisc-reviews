@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'jisc-reviews'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_f0f98f959f0448d38158104d3e2b70a9 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_04c48e05247647568141e52346f9eb92 }}
         package: .
