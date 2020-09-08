@@ -1,3 +1,6 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
 name: Build and deploy Node.js app to Azure Web App - jisc-reviews
 
 on:
@@ -8,9 +11,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-  
-    env: 
-      CI: false
 
     steps:
     - uses: actions/checkout@master
@@ -24,11 +24,12 @@ jobs:
       run: |
         npm install
         npm run build --if-present
+        npm run test --if-present
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: jisc-reviews
+        app-name: 'jisc-reviews'
         slot-name: 'production'
-        publish-profile: ${{ secrets.API_PUBLISH_PROFILE }}
-        package: './build'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_f0f98f959f0448d38158104d3e2b70a9 }}
+        package: .
