@@ -11,6 +11,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+  
+    env: 
+      CI: false
 
     steps:
     - uses: actions/checkout@master
@@ -32,4 +35,4 @@ jobs:
         app-name: 'jisc-reviews'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_2530ac2a24f84a36bf64cbf8b78ef43a }}
-        package: .
+        package: './build'
