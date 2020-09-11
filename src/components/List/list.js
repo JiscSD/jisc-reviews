@@ -11,14 +11,23 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1, 
         'width': '100%', 
     }, 
+    intro: {
+        'margin-top': '3em', 
+    },
+    introtext: {
+        color: theme.palette.text.dark, 
+        'font-weight': '450', 
+        'font-size': '1.2em'
+    },
+    introlistitem: {
+        'list-style-type': 'circle'
+    },
     subcategory: {
-        'margin-top': '6em'
+        'margin-top': '3em'
     }, 
     subcategorytitle: {
         color: theme.palette.text.dark
     },
-    listitem: {
-    }
 }))
 
 const PhysicalList = ({classes, data}) => {
@@ -46,6 +55,19 @@ const List = (props) => {
     return (
         <div className={classes.root}>
             <Grid container spacing={0}>
+                <Grid item xs={1}></Grid>
+                <Grid item xs={10} className={classes.intro}>
+                    <Typography variant='h6' className={classes.introtext}> Here we are reviewing 5 Collaborative Whiteboards, Microsoft Whiteboard, Google Jamboard, Limnu, Miro and Mural. </Typography>
+                    <ul> 
+                        {/* <li className={classes.introlistitem}> <Typography variant='h6' className={classes.introtext}> Microsoft Whiteboard </Typography> </li>
+                        <li className={classes.introlistitem}> <Typography variant='h6' className={classes.introtext}> Google Jamboard </Typography> </li>
+                        <li className={classes.introlistitem}> <Typography variant='h6' className={classes.introtext}> Limnu </Typography> </li>
+                        <li className={classes.introlistitem}> <Typography variant='h6' className={classes.introtext}> Miro </Typography> </li>
+                        <li className={classes.introlistitem}> <Typography variant='h6' className={classes.introtext}> Mural </Typography> </li> */}
+                        {/* <li className={classes.nodecolist}> <Typography variant='h6' className={classes.introtext}>  </Typography></li> */}
+                    </ul>
+                </Grid>
+                <Grid item xs={1}></Grid>
                 <Grid item xs={1}></Grid>
                 <Grid item xs={10} className={classes.subcategory}> 
                     <Typography variant='h3' className={classes.subcategorytitle}> Physical Whiteboard Replacements</Typography>
