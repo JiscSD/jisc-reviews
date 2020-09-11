@@ -1,4 +1,4 @@
-name: Build and deploy Node.js app to Azure Web App - jisc-reviews
+name: Build and deploy Node.js app to Azure Web App - jisc-reviews-prod
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'jisc-reviews'
+        app-name: 'jisc-reviews-prod'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_0a93355bd1f145d791a7bc4286e19d87 }}
         package: './build'
