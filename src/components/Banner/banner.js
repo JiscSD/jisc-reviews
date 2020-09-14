@@ -10,13 +10,11 @@ const useStyles = makeStyles((theme) => ({
     }, 
     container: {
         'width': '100%',
-        'height': '250px', 
-        background: 'linear-gradient(45deg, #4E53A7 30%, #36A5C0 90%)',
-        'display': 'table'
+        background: 'linear-gradient(45deg, #4E53A7 30%, #36A5C0 90%)'
     }, 
     textcontainer: {
         'width': '100%', 
-        'display': 'table-cell', 
+        'display': 'table-cell' 
     },
     title: {
         color: '#FFFFFF',
@@ -30,8 +28,7 @@ const useStyles = makeStyles((theme) => ({
     },
     imagecontainer: {
         'text-align': 'center', 
-        'vertical-align': 'middle', 
-        'display': 'table-cell'
+        'margin-top': '2.5em'
     },
     image: {
         'margin-top': '60px', 
@@ -71,11 +68,6 @@ Collaborative whiteboard applications vary in appearance, features and capabilit
                                 alt=""
                                 className={classes.image}
                             />
-                            <img 
-                                src={require('../../assets/laptopshadow.png')}
-                                alt=""
-                                className={classes.shadow}
-                            ></img>
                         </Grid>
                         <Grid item xs={2}></Grid>
                     </Grid>

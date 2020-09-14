@@ -44,11 +44,13 @@ const useStyles = makeStyles((theme) => ({
     }, 
     screenshotmain: {
         'box-shadow': '0px 1px 3px #EFEFEF', 
-        'height': '250px', 
-        'overflow': 'hidden' 
+        // 'height': '20em', 
+        'overflow': 'hidden', 
+        'margin': 'auto' 
     }, 
     screenshot: {
         'width': '100%', 
+        'height': '100%'
     },
     buttoncontainer: {
         'display': 'flex', 
