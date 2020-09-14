@@ -12,9 +12,6 @@ jobs:
   build-and-deploy:
     runs-on: windows-latest
 
-    env: 
-      CI: false
-
     steps:
     - uses: actions/checkout@master
 
@@ -27,11 +24,12 @@ jobs:
       run: |
         npm install
         npm run build --if-present
+        npm run test --if-present
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'jisc-reviews'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_8ea2ad2348c342abb02ed90da159b186 }}
-        package: './build'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_78cd6384c5c245848b5154f276f6c7f2 }}
+        package: .
